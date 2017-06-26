@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Session6 Ass3</title>
+        <!-- modify the style.css inside css folder -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Main Div started-->
+        <div id="maindiv">
+            <h2>Mark Sheet Calculation : </h2><hr>
+            <!--Table for Mark sheet -->
+                <table  id="details">
+                    <tr>
+                       <td>Name:</td>
+                        <td><input type="text" size="10" maxlength="10" id="s_name" placeholder="Enter Name" ></td>
+                    </tr>
+                    <tr>
+                        <td>Branch : </td>
+                        <td>
+                            <select id="s_branch">
+                                <option value="">Select</option>
+                                <option value="CSE">CSE</option>
+                                <option value="Mechanical">Mechanical</option>
+                                <option value="Electrical">Electrical</option>
+                                <option value="Civil">Civil</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <table border="1px">
+                    <tr>
+                        <th colspan="3">MARK DISTRIBUTION</th>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>CSS</td>
+                        <td>JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="html_m"></td>
+                        <td><input type="number" id="css_m"></td>
+                        <td><input type="number" id="js_m"></td>
+                    </tr>
+                </table>
+            <br>
+                <div><input type="button" onclick="Calculate();" value="Calculate"></div>
+            <!-- Result Div-->
+            <div id="result">
+                <h3 style="color:green;" align="center">Result Sheet</h3>
+                <hr>
+                <table id="res_table" align="center">
+                    <tr>
+                        <td>Name:</td>
+                        <td id="name_s1"></td>
+                    </tr>
+                    <tr>
+                        <td>Branch : </td>
+                        <td id="branch_s"></td>
+                    </tr>
+                    <tr>
+                        <td>Grade:</td>
+                        <td id="grade_s" style="color:red;font-size:30px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Percentage : </td>
+                        <td id="percentage_s"  style="color:green;font-size:22px;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center;color:blue;">SUBJECT<hr></td>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td id="html_m_r"></td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td id="css_m_r"></td>
+                    </tr>
+                    <tr>
+                        <td>Javascript</td>
+                        <td id="js_m_r"></td>
+                    </tr>
+                    <tr><td colspan="2"><hr></td></tr>
+                    <tr>
+                        <td>TOTAL(out Of 300) : </td>
+                        <td><span id="tot_m_r" style="font-size:30px;color:brown;"></span> Marks</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- javascript codes are written in main.js file of js folder -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
